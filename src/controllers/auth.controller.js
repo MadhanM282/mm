@@ -3,6 +3,7 @@ const jwt = require("jsonwebtoken");
 const User = require("../models/user.model");
 
 const newToken = (user) => {
+  //JWT_SECRET_KEY create a .env file and enter a security key JWT_SECRET_KEY =Madhan
   return jwt.sign({ user }, process.env.JWT_SECRET_KEY);
 };
 
